@@ -22,7 +22,6 @@
         public LandingPage(WebDriver driver) {
             this.driver = driver;
         }
-
         public void clickAddToCarts(){
             driver.findElements(addToCartsButton2).get(1).click();
             System.out.println("asdrrrr");
@@ -31,11 +30,11 @@
         public void clickContinueShopping(){
             driver.findElement(continueShopping).click();
         }
-    //remove from carts
+
         public void removeFromCarts() throws InterruptedException {
             Actions actions = new Actions(driver);
             actions.moveToElement(driver.findElement(By.cssSelector("a[title='View my shopping cart']"))).build().perform();
-            //Thread.sleep(1000);
+
             driver.findElement(By.xpath("//span[@class='remove_link']")).click();
 
         }

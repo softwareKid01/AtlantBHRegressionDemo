@@ -8,7 +8,6 @@ public class RegistrationPage {
     WebDriver driver;
     private By fname = By.xpath("//input[@id='customer_firstname']");
     private By lastName = By.xpath("//input[@id='customer_lastname']");
-    //private By email = By.id();
     private By password = By.xpath("//input[@id='passwd']");
     private By company = By.xpath("//input[@id='company']");
     private By address1 = By.xpath("//input[@id='address1']");

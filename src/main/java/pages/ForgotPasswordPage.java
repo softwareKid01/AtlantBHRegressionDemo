@@ -10,15 +10,12 @@
         public ForgotPasswordPage(WebDriver driver) {
             this.driver = driver;
         }
-
         public void enterEmailField(String email){
             driver.findElement(forgotPasswordField).sendKeys(email);
         }
-
         public void retrievePasswordButton(){
             driver.findElement(retrievePasswordButton).click();
         }
-
         public Boolean errorShown(){
             Boolean isDisplaied =  driver.findElement(By.xpath("//div[@class='alert alert-danger']")).isDisplayed();
             return isDisplaied;
