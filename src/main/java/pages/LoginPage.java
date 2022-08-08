@@ -14,25 +14,19 @@
         private By forgotPassword = By.xpath("//a[@title='Recover your forgotten password']");
         private By emailAccountCreationInput = By.xpath("//input[@name='email_create']");
         private By accountCreateButton = By.xpath("//button[@id='SubmitCreate']");
-
-
         public LoginPage(WebDriver driver) {
             this.driver = driver;
         }
-
         public void enterEmailAddress(String email){
             driver.findElement(emailLofin).sendKeys(email);
         }
-
         public void enterPassword(String password){
             driver.findElement(passwordLogin).sendKeys(password);
         }
-
         public MyAccountPage clickSignIn(){
             driver.findElement(signIn).click();
             return new MyAccountPage(driver);
         }
-
         public String getText(){
         String errorText = driver.findElement(authText).getText();
         return errorText;
@@ -41,22 +35,18 @@
             String errorText = driver.findElement(authEmailText).getText();
             return errorText;
         }
-
         public String getBlankAuthText(){
             String errorText = driver.findElement(Blankauth).getText();
             return errorText;
         }
-
         public ForgotPasswordPage clickForgotPassword(){
             driver.findElement(forgotPassword).click();
             return new ForgotPasswordPage(driver);
         }
-
         public void createAccountEmailField(String email){
             driver.findElement(emailAccountCreationInput).sendKeys(email);
 
         }
-
         public RegistrationPage clickAcountCreateButton(){
             driver.findElement(accountCreateButton).click();
             return new RegistrationPage(driver);

@@ -17,14 +17,10 @@ public class RegistrationPage {
     private By registratioButton = By.xpath("//button[@id='submitAccount']");
     private By homeNumber = By.xpath("//input[@id='phone']");
     private By alias = By.xpath("//input[@id='alias']");
-
-
     public RegistrationPage(WebDriver driver) {
         this.driver = driver;
     }
-
-    public void enterAccountInfo(String name,String lname,String pwd,
-                                 String comp,String address,String city,String stat,String postal) throws InterruptedException {
+    public void enterAccountInfo(String name,String lname,String pwd, String comp,String address,String city,String stat,String postal) throws InterruptedException {
         driver.findElement(fname).sendKeys(name);
         driver.findElement(lastName).sendKeys(lname);
         driver.findElement(password).sendKeys(pwd);
@@ -36,20 +32,12 @@ public class RegistrationPage {
         driver.findElement(postalCode).sendKeys(postal);
         driver.findElement(homeNumber).sendKeys("4168975642");
         driver.findElement(alias).sendKeys("SarajevoCentar");
-
-
-
     }
-
     public void clickRegistrationButton(){
         driver.findElement(registratioButton).click();
-
     }
-
     public Boolean errorShown(){
        Boolean isDisplaied =  driver.findElement(By.xpath("//div[@class='alert alert-danger']")).isDisplayed();
        return isDisplaied;
     }
-
-
 }
