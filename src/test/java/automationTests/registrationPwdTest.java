@@ -13,8 +13,7 @@ public class registrationPwdTest extends baseTest {
         LoginPage loginPage = landingPage.logIn();
         loginPage.createAccountEmailField("oggiagga@7887.com");
         RegistrationPage registrationPage = loginPage.clickAcountCreateButton();
-        registrationPage.enterAccountInfo("Mehmedalija","Dizdar","asd","Energoinvest",
-                "PartizanskaProleterska","Titograd","Alabama","00000");
+        registrationPage.enterAccountInfo("Mehmedalija","Dizdar","asd","Energoinvest", "PartizanskaProleterska","Titograd","Alabama","00000");
         registrationPage.clickRegistrationButton();
         Assert.assertTrue(registrationPage.errorShown());
 

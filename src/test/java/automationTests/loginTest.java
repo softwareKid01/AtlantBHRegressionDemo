@@ -13,7 +13,7 @@ public class loginTest extends baseTest {
       loginPage.enterEmailAddress("JohnDoe99@gmail.com");
       loginPage.enterPassword("SmokeTestivggng123");
       loginPage.clickSignIn();
-        Assert.assertTrue(loginPage.getText().contains("Authentication failed."));
+      Assert.assertTrue(loginPage.getText().contains("Authentication failed."));
     }
 
 }

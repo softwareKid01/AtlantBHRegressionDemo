@@ -12,9 +12,5 @@ public class loginError {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://automationpractice.com/index.php");
-
-
-
-
     }
 }

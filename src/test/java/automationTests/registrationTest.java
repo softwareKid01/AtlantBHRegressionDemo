@@ -13,8 +13,7 @@ public class registrationTest extends baseTest {
         LoginPage loginPage = landingPage.logIn();
         loginPage.createAccountEmailField("oggiagga@7887.com");
         RegistrationPage registrationPage = loginPage.clickAcountCreateButton();
-        registrationPage.enterAccountInfo("","","JNA87","FAMOS",
-                                         "ZaimaSarca23A","Sarajevo","Alabama","00000");
+        registrationPage.enterAccountInfo("","","JNA87","FAMOS", "ZaimaSarca23A","Sarajevo","Alabama","00000");
         registrationPage.clickRegistrationButton();
         Assert.assertTrue(registrationPage.errorShown());
 

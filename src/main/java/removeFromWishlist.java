@@ -12,27 +12,14 @@ public class removeFromWishlist {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("http://automationpractice.com/index.php");
-
         By signInLink = By.cssSelector("a[title='Log in to your customer account']");
         By emailLofin = By.id("email");
         By passwordLogin = By.id("passwd");
         By signIn = By.id("SubmitLogin");
-
         driver.findElement(signInLink).click();
-
-
-
-
-
-            driver.findElement(emailLofin).sendKeys("JohnDoe99@gmail.com");
-
-
-
-            driver.findElement(passwordLogin).sendKeys("SmokeTesting123");
-
-
-
-            driver.findElement(signIn).click();
+        driver.findElement(emailLofin).sendKeys("JohnDoe99@gmail.com");
+        driver.findElement(passwordLogin).sendKeys("SmokeTesting123");
+        driver.findElement(signIn).click();
 
 
     }
