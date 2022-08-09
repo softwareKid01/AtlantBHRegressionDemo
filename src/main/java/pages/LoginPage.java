@@ -24,9 +24,8 @@
         public void enterPassword(String password){
             driver.findElement(passwordLogin).sendKeys(password);
         }
-        public MyAccountPage clickSignIn(){
+        public void clickSignIn(){
             driver.findElement(signIn).click();
-            return new MyAccountPage(driver);
         }
         public String getText(){
         String errorText = driver.findElement(authText).getText();
@@ -46,7 +45,6 @@
         }
         public void createAccountEmailField(String email){
             driver.findElement(emailAccountCreationInput).sendKeys(email);
-
         }
         public RegistrationPage clickAcountCreateButton(){
             driver.findElement(accountCreateButton).click();

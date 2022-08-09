@@ -13,6 +13,6 @@ public class forgotPaswordTests extends baseTest {
        ForgotPasswordPage forgotPasswordPage = loginPage.clickForgotPassword();
        forgotPasswordPage.enterEmailField("tarikdedic18@gmail.com");
        forgotPasswordPage.retrievePasswordButton();
-       Assert.assertTrue(forgotPasswordPage.forgotPwdErrorShow());
+       Assert.assertTrue(forgotPasswordPage.forgotPwdMessageShow());
     }
 }

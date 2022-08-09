@@ -17,6 +17,7 @@ public class RegistrationPage {
     private By registratioButton = By.xpath("//button[@id='submitAccount']");
     private By homeNumber = By.xpath("//input[@id='phone']");
     private By alias = By.xpath("//input[@id='alias']");
+    private By registrationError = By.xpath("//div[@class='alert alert-danger']");
     public RegistrationPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -37,7 +38,7 @@ public class RegistrationPage {
         driver.findElement(registratioButton).click();
     }
     public Boolean errorShown(){
-       Boolean isDisplaied =  driver.findElement(By.xpath("//div[@class='alert alert-danger']")).isDisplayed();
+       Boolean isDisplaied =  driver.findElement(registratioButton).isDisplayed();
        return isDisplaied;
     }
 }
