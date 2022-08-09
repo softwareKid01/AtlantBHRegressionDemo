@@ -1,6 +1,7 @@
 package automationTests;
 
 import base.baseTest;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.ForgotPasswordPage;
 import pages.LoginPage;
@@ -12,5 +13,6 @@ public class forgotPaswordTests extends baseTest {
        ForgotPasswordPage forgotPasswordPage = loginPage.clickForgotPassword();
        forgotPasswordPage.enterEmailField("tarikdedic18@gmail.com");
        forgotPasswordPage.retrievePasswordButton();
+       Assert.assertTrue(forgotPasswordPage.forgotPwdErrorShow());
     }
 }

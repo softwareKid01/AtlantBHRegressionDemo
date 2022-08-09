@@ -5,8 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
-public class loginTest extends baseTest {
-
+public class loginEmailWrongPwd extends baseTest {
     @Test
     public void loginError(){
       LoginPage loginPage = landingPage.logIn();
@@ -15,5 +14,4 @@ public class loginTest extends baseTest {
       loginPage.clickSignIn();
       Assert.assertTrue(loginPage.getText().contains("Authentication failed."));
     }
-
 }

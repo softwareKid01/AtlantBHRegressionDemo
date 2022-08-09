@@ -7,7 +7,6 @@ import pages.LoginPage;
 import pages.RegistrationPage;
 
 public class registrationPhoneNumberTest extends baseTest {
-
     @Test
     public void registerCiryError() throws InterruptedException {
         LoginPage loginPage = landingPage.logIn();

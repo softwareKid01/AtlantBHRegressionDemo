@@ -7,7 +7,6 @@ import pages.LoginPage;
 import pages.RegistrationPage;
 
 public class registrationTest extends baseTest {
-
     @Test
     public void registerError() throws InterruptedException {
         LoginPage loginPage = landingPage.logIn();
@@ -16,8 +15,5 @@ public class registrationTest extends baseTest {
         registrationPage.enterAccountInfo("","","JNA87","FAMOS", "ZaimaSarca23A","Sarajevo","Alabama","00000");
         registrationPage.clickRegistrationButton();
         Assert.assertTrue(registrationPage.errorShown());
-
     }
-
-
 }

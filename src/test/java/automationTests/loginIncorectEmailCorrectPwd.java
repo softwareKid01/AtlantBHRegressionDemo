@@ -5,8 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
-public class loginTest2Tests extends baseTest {
-
+public class loginIncorectEmailCorrectPwd extends baseTest {
     @Test
     public void loginError(){
         LoginPage loginPage = landingPage.logIn();

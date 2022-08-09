@@ -2,13 +2,13 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import pages.LandingPage;
 
 import java.util.concurrent.TimeUnit;
 
 public class baseTest {
-
     private WebDriver driver;
     protected LandingPage landingPage;
     @BeforeClass
@@ -17,8 +17,10 @@ public class baseTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("http://automationpractice.com/index.php");
-
-
         landingPage = new LandingPage(driver);
+    }
+    @AfterClass
+    public void quit(){
+        driver.quit();
     }
 }

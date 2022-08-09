@@ -14,6 +14,7 @@
         private By forgotPassword = By.xpath("//a[@title='Recover your forgotten password']");
         private By emailAccountCreationInput = By.xpath("//input[@name='email_create']");
         private By accountCreateButton = By.xpath("//button[@id='SubmitCreate']");
+        private By regError = By.xpath("//div[@class='alert alert-danger']");
         public LoginPage(WebDriver driver) {
             this.driver = driver;
         }
@@ -50,5 +51,9 @@
         public RegistrationPage clickAcountCreateButton(){
             driver.findElement(accountCreateButton).click();
             return new RegistrationPage(driver);
+        }
+        public Boolean errorShown(){
+            Boolean isDisplaied =  driver.findElement(regError).isDisplayed();
+            return isDisplaied;
         }
     }

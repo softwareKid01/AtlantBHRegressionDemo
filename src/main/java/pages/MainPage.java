@@ -13,6 +13,4 @@
             driver.findElement(img).click();
             return new ProductDetailedPage(driver);
         }
-
-
     }

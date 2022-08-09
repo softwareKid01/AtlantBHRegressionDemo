@@ -7,6 +7,7 @@
         WebDriver driver;
         private By forgotPasswordField = By.cssSelector("input[class='form-control'] ");
         private By retrievePasswordButton = By.xpath("//form[@id='form_forgotpassword']//button[@type='submit']");
+        private By forgotPwdMessage = By.xpath("//p[@class='alert alert-success']");
         public ForgotPasswordPage(WebDriver driver) {
             this.driver = driver;
         }
@@ -20,8 +21,8 @@
             Boolean isDisplaied =  driver.findElement(By.xpath("//div[@class='alert alert-danger']")).isDisplayed();
             return isDisplaied;
         }
-
-
-
-
+        public Boolean forgotPwdErrorShow(){
+            Boolean isDisplaied =  driver.findElement(forgotPwdMessage).isDisplayed();
+            return isDisplaied;
+        }
     }

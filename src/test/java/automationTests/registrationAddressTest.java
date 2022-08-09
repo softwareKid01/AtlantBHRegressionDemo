@@ -7,7 +7,6 @@ import pages.LoginPage;
 import pages.RegistrationPage;
 
 public class registrationAddressTest extends baseTest {
-
     @Test
     public void registerAddressError() throws InterruptedException {
         LoginPage loginPage = landingPage.logIn();

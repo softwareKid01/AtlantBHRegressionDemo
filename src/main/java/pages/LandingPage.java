@@ -14,6 +14,8 @@
         private By womenLink = By.linkText("Women");
         private WebElement cartsBar = driver.findElement(By.cssSelector("a[title='View my shopping cart']"));
         private By removeLinkX = By.xpath("//span[@class='remove_link']");
+        private By cartsQuantity = By.xpath("//span[@class='ajax_cart_quantity']");
+        private By cartsEmpty = By.xpath("//span[@class='ajax_cart_no_product']");
         public LandingPage(WebDriver driver) {
             this.driver = driver;
         }
@@ -36,6 +38,14 @@
         public LoginPage logIn(){
             driver.findElement(signInLink).click();
             return new LoginPage(driver);
+        }
+        public String getCartsQuantity(){
+          String text = driver.findElement(cartsQuantity).getText();
+            return text;
+        }
+        public String getEmptyCarts(){
+            String text = driver.findElement(cartsEmpty).getText();
+            return text;
         }
     }
 
